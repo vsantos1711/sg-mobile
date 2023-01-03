@@ -1,14 +1,14 @@
 import * as S from "./styled";
 import LogoSG from "../../assets/logos/logo_sgedu.png";
-import FormLogin from "../../components/FormLogin";
+import FormRegister from "../../components/FormRegister";
 
-const TelaLogin = () => {
+const TelaCadastro = () => {
   return (
     <S.Bg>
       <S.Img source={LogoSG} />
-      <FormLogin />
+      <FormRegister />
     </S.Bg>
   );
 };
 
-export default TelaLogin;
+export default TelaCadastro;
