@@ -1,21 +1,38 @@
+import React, { useState } from "react";
 import * as S from "./styled";
 import { useNavigation } from "@react-navigation/native";
 import TextInput from "../TextInput";
 import Btn from "../Btn";
 
+const fCadastrar = () => {
+  console.log({ email, phone, password });
+};
+
 const FormRegister = () => {
   const { navigate } = useNavigation();
+
+  const [email, setEmail] = useState("");
+  const [phon, setPhone] = useState("");
+  const [password, setPassword] = useState("");
 
   return (
     <S.Form>
       <S.Title>CADASTRO</S.Title>
-      <TextInput PlaceHolder="Email" />
-      <TextInput PlaceHolder="Telefone" KeyboardType="numeric" />
-      <TextInput PlaceHolder="Senha" SecureTextEntry={true} />
+      <TextInput PlaceHolder="Email" Onchange={(text) => setEmail(text)} />
+      <TextInput
+        PlaceHolder="Telefone"
+        KeyboardType="numeric"
+        Onchange={(text) => setTelefone(text)}
+      />
+      <TextInput
+        PlaceHolder="Senha"
+        SecureTextEntry={true}
+        Onchange={(text) => setPassword}
+      />
       <Btn
         TextButton="CRIAR"
         OnPress={() => {
-          console.log("o botao foi clicado");
+          fCadastrar();
         }}
       />
       <S.Text01>Já possui acesso?</S.Text01>

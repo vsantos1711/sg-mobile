@@ -13,6 +13,7 @@ export const Title = styled.Text`
   margin-top: 20px;
   margin-bottom: 10px;
 `;
+
 export const Text01 = styled.Text`
   font-size: 15px;
   font-weight: 500;
