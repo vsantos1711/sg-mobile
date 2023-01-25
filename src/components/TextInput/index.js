@@ -4,14 +4,14 @@ const TextInput = ({
   PlaceHolder,
   SecureTextEntry,
   KeyboardType,
-  Onchange,
+  OnChangeText,
 }) => {
   return (
     <S.TextInput
+      onChangeText={OnChangeText}
       placeholder={PlaceHolder}
       secureTextEntry={SecureTextEntry}
       keyboardType={KeyboardType}
-      onChange={Onchange}
     />
   );
 };

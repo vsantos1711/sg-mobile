@@ -4,24 +4,26 @@ import { useNavigation } from "@react-navigation/native";
 import TextInput from "../TextInput";
 import Btn from "../Btn";
 
-const fEntrar = () => {
-  console.log({ user, senha });
-};
-
 const FormLogin = () => {
-  const { navigate } = useNavigation();
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const { navigate } = useNavigation();
+
+  const fEntrar = () => {
+    console.log({ email, password });
+  };
 
   return (
     <S.Form>
       <S.Title>LOGIN</S.Title>
-      <TextInput PlaceHolder="Email" Onchange={(text) => setUser(text)} />
+      <TextInput PlaceHolder="Email" OnChangeText={(text) => setEmail(text)} />
       <TextInput
         PlaceHolder="Senha"
         SecureTextEntry={true}
-        Onchange={(text) => setPassword(text)}
+        OnChangeText={(text) => {
+          setPassword(text);
+        }}
       />
       <Btn
         TextButton="ACESSAR"

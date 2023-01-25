@@ -1,6 +1,6 @@
 import styled from "styled-components/native";
 
-export const Form = styled.View`
+export const Form = styled.SafeAreaView`
   background-color: #fff;
   width: 340px;
   border-radius: 5px;
