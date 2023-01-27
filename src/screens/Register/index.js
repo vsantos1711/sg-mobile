@@ -2,13 +2,15 @@ import * as S from "./styled";
 import LogoSG from "../../assets/logos/logo_sgedu.png";
 import FormRegister from "../../components/FormRegister";
 
-const TelaCadastro = () => {
+const TelaLogin = () => {
   return (
     <S.Bg>
-      <S.Img source={LogoSG} />
-      <FormRegister />
+      <S.Form>
+        <S.Img source={LogoSG} />
+        <FormRegister />
+      </S.Form>
     </S.Bg>
   );
 };
 
-export default TelaCadastro;
+export default TelaLogin;

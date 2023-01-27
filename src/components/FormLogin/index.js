@@ -11,7 +11,9 @@ const FormLogin = () => {
   const { navigate } = useNavigation();
 
   const fEntrar = () => {
-    console.log({ email, password });
+    if (email == "admin" && password == "admin") {
+      navigate("Home");
+    }
   };
 
   return (

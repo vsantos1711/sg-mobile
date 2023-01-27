@@ -5,8 +5,10 @@ import FormLogin from "../../components/FormLogin";
 const TelaLogin = () => {
   return (
     <S.Bg>
-      <S.Img source={LogoSG} />
-      <FormLogin />
+      <S.Form>
+        <S.Img source={LogoSG} />
+        <FormLogin />
+      </S.Form>
     </S.Bg>
   );
 };

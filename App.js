@@ -12,7 +12,13 @@ export default function App() {
       <Telas.Navigator>
         <Telas.Screen name="Login" component={TelaLogin} />
         <Telas.Screen name="Register" component={TelaRegister} />
-        {/* <Telas.Screen name="Home" component={TelaHome} /> */}
+        <Telas.Screen
+          name="Home"
+          component={TelaHome}
+          options={{
+            headerShown: false,
+          }}
+        />
       </Telas.Navigator>
     </NavigationContainer>
   );
